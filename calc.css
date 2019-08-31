@@ -1,0 +1,41 @@
+body{
+    background-color: aquamarine;
+    text-decoration-style: double;
+    font-size: bold;
+}
+
+#main{
+    border: 2px solid black;
+    width: 30%;
+    margin: 0 auto;
+    padding-left:50px; 
+    margin-top: 30px; 
+}
+
+#num1{
+    width: 35%;
+}
+#num2{
+    width: 35%;
+}
+
+#result{
+    width: 60%;
+}
+
+#operators{
+    width: 17%;
+}
+#button{
+    width: 50%;
+    margin-left: 20%;
+    /* margin: 0 auto; */
+}
+.input{
+    display: inline-block;
+    margin: 10px;
+    border: 2px solid red;
+    padding: 3%;
+    
+}
+
