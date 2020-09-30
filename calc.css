@@ -1,41 +1,127 @@
-body{
-    background-color: aquamarine;
-    text-decoration-style: double;
-    font-size: bold;
+:root {
+  --orange-050: #ffe8d9;
+  --orange-100: #ffd0b5;
+  --orange-200: #ffb088;
+  --orange-300: #ff9466;
+  --orange-400: #f9703e;
+  --orange-500: #f35627;
+  --orange-600: #de3a11;
+  --orange-700: #c52707;
+  --orange-800: #ad1d07;
+  --orange-900: #841003;
+
+  --gray-050: #f5f7fa;
+  --gray-100: #e4e7eb;
+  --gray-200: #cbd2d9;
+  --gray-300: #9aa5b1;
+  --gray-400: #7b8794;
+  --gray-500: #616e7c;
+  --gray-600: #52606d;
+  --gray-700: #3e4c59;
+  --gray-800: #323f4b;
+  --gray-900: #1f2933;
 }
 
-#main{
-    border: 2px solid black;
-    width: 30%;
-    margin: 0 auto;
-    padding-left:50px; 
-    margin-top: 30px; 
+html {
+  font-size: 150%;
+  font-weight: 300;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
 }
 
-#num1{
-    width: 35%;
-}
-#num2{
-    width: 35%;
+body {
+  background-color: #f5f5f5;
 }
 
-#result{
-    width: 60%;
+.calculator {
+  width: 16rem;
+  margin: 200px auto;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.7);
 }
 
-#operators{
-    width: 17%;
-}
-#button{
-    width: 50%;
-    margin-left: 20%;
-    /* margin: 0 auto; */
-}
-.input{
-    display: inline-block;
-    margin: 10px;
-    border: 2px solid red;
-    padding: 3%;
-    
+.calculator__display {
+  background-color: var(--gray-900);
+  color: var(--gray-050);
+  padding: 0.5rem 1rem;
+  text-align: right;
+  font-size: calc(1rem * 1.2 * 1.2);
 }
 
+.claculator__keys {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(4, auto);
+  grid-template-areas:
+    ". . . ."
+    "seven eight nine equal"
+    "four five six equal"
+    "one two three equal"
+    "zero decimal clear equal";
+
+  height: 15rem;
+}
+
+.claculator__keys > button {
+  border: 0;
+}
+
+.one {
+  grid-area: one;
+}
+.two {
+  grid-area: two;
+}
+.three {
+  grid-area: three;
+}
+.four {
+  grid-area: four;
+}
+.five {
+  grid-area: five;
+}
+.six {
+  grid-area: six;
+}
+.seven {
+  grid-area: seven;
+}
+.eight {
+  grid-area: eight;
+}
+.nine {
+  grid-area: nine;
+}
+.zero {
+  grid-area: zero;
+}
+.decimal {
+  grid-area: decimal;
+}
+.clear {
+  grid-area: clear;
+}
+.equal {
+  grid-area: equal;
+  background-color: var(--orange-400);
+}
+
+.equal:active {
+  grid-area: equal;
+  background-color: var(--orange-500);
+}
+
+.operator {
+  background-color: var(--gray-100);
+}
+
+.number {
+  background-color: #fff;
+}
+
+.operator:active,
+.number:active {
+  background-color: var(--gray-200);
+}
