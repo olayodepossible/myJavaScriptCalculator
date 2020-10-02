@@ -49,7 +49,7 @@ body {
   font-size: calc(1rem * 1.2 * 1.2);
 }
 
-.claculator__keys {
+.calculator__keys {
   display: grid;
   gap: 5px;
   grid-template-columns: repeat(4, auto);
@@ -63,7 +63,7 @@ body {
   height: 15rem;
 }
 
-.claculator__keys > button {
+.calculator__keys > button {
   border: 0;
 }
 
@@ -113,15 +113,15 @@ body {
   background-color: var(--orange-500);
 }
 
-.operator {
+[data-type="operator"] {
   background-color: var(--gray-100);
 }
 
-.number {
+[data-type="number"] {
   background-color: #fff;
 }
 
-.operator:active,
-.number:active {
+[data-type="operator"]:active,
+[data-type="number"]r:active {
   background-color: var(--gray-200);
 }
